@@ -12,6 +12,8 @@ contract SimpleStorage {
 
     Person[] public listOfPeople;
 
+    mapping(string => uint256) public nameToFavoriteNumber;
+
     //Function name will displayed on "Deployed Contracts"
     function store(uint256 _favoriteNumber) public{
         myNumber = _favoriteNumber;
@@ -27,5 +29,6 @@ contract SimpleStorage {
     // storage -> perm data | not modified
     function addPerson(string memory _name, uint256 _favoriteNumber) public{
         listOfPeople.push(Person(_favoriteNumber, _name));
+        nameToFavoriteNumber[_name] = _favoriteNumber;
     }
 }
