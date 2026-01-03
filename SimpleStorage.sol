@@ -23,6 +23,8 @@ contract SimpleStorage {
     }
 
     //add list of favorite number
+    //calldata, memory -> temp data | not modified, modified
+    // storage -> perm data | not modified
     function addPerson(string memory _name, uint256 _favoriteNumber) public{
         listOfPeople.push(Person(_favoriteNumber, _name));
     }
