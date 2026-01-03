@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.31; //Compiler version
+pragma solidity 0.8.24; //Compiler version
 
 contract SimpleStorage {
     //initialized to 0
