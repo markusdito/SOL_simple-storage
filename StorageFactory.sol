@@ -12,9 +12,14 @@ contract StorageFactory {
         listOfStorageContracts.push(newSimpleStorageConctrct);
     }
 
-    function sfStore(uint256 index,uint256 _favNumber) public {
-        SimpleStorage contractX = listOfStorageContracts[index];
+    function sfStore(uint256 _index, uint256 _favNumber) public {
+        SimpleStorage contractX = listOfStorageContracts[_index];
         contractX.store(_favNumber);
+    }
+
+    function sfGetNumber(uint256 _index) public view returns(uint256) {
+        SimpleStorage contractX = listOfStorageContracts[_index];
+        return contractX.retrieve();
     }
 
 }
